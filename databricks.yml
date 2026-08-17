@@ -1,0 +1,10 @@
+bundle:
+  name: car_data_engineering
+
+include:
+  - resources/*.yml
+
+targets:
+  dev:
+    mode: development
+    default: true
