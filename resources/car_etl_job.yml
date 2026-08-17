@@ -1,0 +1,15 @@
+resources:
+  jobs:
+    car_etl_job:
+      name: car ETL job
+
+      tasks:
+        - task_key: silver_data
+          notebook_task:
+            notebook_path: ../silver notebook.py
+
+        - task_key: gold_dimensions
+          depends_on:
+            - task_key: silver_data
+          notebook_task:
+            notebook_path: ../goldd notebook.py
